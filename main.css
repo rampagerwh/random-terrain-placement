@@ -1,0 +1,32 @@
+body {
+  background-color: rgb(20, 20, 20);
+  font-family: sans-serif;
+  color: rgb(220, 220, 220);
+}
+
+input {
+  min-height: 1.5em;
+  background-color: rgb(40, 40, 40);
+  color: rgb(220, 220, 220);
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.number-input {
+  max-width: 2em;
+  text-align: right;
+  border: none;
+}
+
+input[type=button] {
+  border: solid 2px rgb(60, 60, 60);
+}
+
+#main {
+  margin: 10px;
+}
+
+#svgContainer {
+  text-align: center;
+  padding: 20px;
+}
