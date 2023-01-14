@@ -19,11 +19,17 @@ recalc()
 function recalc() {
   let bodyWidth = body.offsetWidth - 2 * svgPadding
   let width = parseInt(widthInput.value)
-  let height = parseInt(heightInput.value)
 
   let t = bodyWidth / width
   let f = t % 1 // get fractional part
   scale = Math.max(t - f, 1)
+  
+  let height = parseInt(heightInput.value)
+  let windowHeight = (window.innerHeight - 2 * svgPadding) * 0.85
+  t = windowHeight / height
+  f = t % 1 // get fractional part
+  let hScale = Math.max(t - f, 1)
+  scale = Math.min(scale, hScale)  
 
   svg.setAttribute("width", width * scale)
   svg.setAttribute("height", height * scale)
